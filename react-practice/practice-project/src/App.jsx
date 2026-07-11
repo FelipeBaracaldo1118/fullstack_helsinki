@@ -5,10 +5,10 @@ import heroImg from './assets/hero.png'
 import './App.css'
 
 
-const Hello = () => {
+const Hello = (props) => {
   return (
     <>
-      <p>Hello World</p>
+      <p>Hello World {props.name} and your age is {props.age} </p>
     </>
   )
 }
@@ -19,15 +19,25 @@ function App() {
     let b = 20;
 
     console.log(now, a+b);
-
+    
+    const name = 'Felipe'
+    const age = 24;
+const Footer = () => {
+  return (
+    <>
+      <button>Hello</button>
+    </>
+  )
+}
   return (
     <>
       <p>Greetings{now.toString}</p>
       <p>
         {a} + {b} is {a+b}
       </p>
-      <Hello/>
-      <Hello/>
+      <Hello name='George' age={17}/>
+      <Hello name={name} age ={age}/>
+      <Footer/>
     </>
   )
 }
